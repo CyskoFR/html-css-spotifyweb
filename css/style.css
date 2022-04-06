@@ -10,6 +10,26 @@ header {
     justify-content: flex-end;
 }
 
+main {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: #6e6e6e;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.sidebar {
+    display: flex;
+    width: 260px;
+    height: calc(100vh - 100px);
+    flex-direction: column;
+    background-color: #000000;
+}
+
+/* upgrade-row */
 .upgrade-row {
     display: flex;
     width: calc(100% - 260px);
@@ -24,24 +44,65 @@ header {
 .upgrade-row button {
     background-color: transparent;
     color: white;
-    padding: 8px 18px;
+    padding: 8px 28px;
     border: 1px solid white;
     border-radius: 16px;
     margin-right: 20px;
     cursor: pointer;
 }
 
-main {
-    display: flex;
+.upgrade-row button:hover {
+    transform: scale(110%);
+}
+/* /upgrade-row */
+
+/* logo */
+.logo-box {
+    padding: 18px;
 }
 
-.sidebar {
-    display: flex;
-    width: 260px;
-    height: calc(100vh - 100px);
-    flex-direction: column;
-    background-color: #000000;
+.logo {
+    width: 70%;
 }
+/* /logo */
+
+/* sidebar-nav */
+.sidebar-nav {
+    padding: 4px 18px;
+    overflow: auto;
+}
+
+.sidebar-main-nav {
+    margin-bottom: 18px;
+}
+
+.sidebar-nav li {
+    margin: 14px 0;
+}
+
+.sidebar-main-nav li a img {
+    height: 30px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.playlist-title {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.playlist-nav i {
+    background-color: #a3a3a3;
+    color: #000000;
+    padding: 6px 8px;
+    font-size: 26px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+/* /sidebar-nav */
 
 .display-box {
     background-color: #141922;
