@@ -328,11 +328,107 @@ main {
 /* /artisti popolari */
 /* /main album box */
 
+/* footer player */
 .footer-player {
     position: fixed;
+    display: flex;
     left: 0;
     bottom: 0;
     background-color: #282828;
     width: 100%;
     height: 100px;
+    justify-content: space-between;
+    padding: 0 12px;
 }
+
+.footer-player_left, .footer-player_center, .footer-player_right {
+    display: flex;
+    align-items: center;
+}
+
+.footer-img {
+    height: 60px;
+    margin-right: 14px;
+}
+
+.footer-song-name-box {
+    margin-right: 28px;
+}
+
+.footer-song-artist {
+    color: white;
+    font-size: 18px;
+}
+
+.footer-song-name {
+    color: #a3a3a3;
+    font-size: 14px;
+}
+
+.footer-left-icon-box {
+    color: #a3a3a3;
+}
+
+.footer-left-icon-box i {
+    margin-right: 8px;
+}
+
+.footer-left-icon-box i:hover {
+    color: white;
+    font-weight: bold;
+}
+
+.footer-player_right i {
+    color: white;
+    margin: 0 8px;
+    font-size: 14px;
+}
+
+.footer-volume-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 80px;
+    height: 3px;
+    border-radius: 4px;
+    background-color: #6e6e6e;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.footer-volume-bar_volume-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    border-radius: 4px;
+    background-color: white;
+    width: 30px;
+}
+
+.footer-volume-bar_volume-indicator-dot-overlay {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+.footer-volume-bar_volume-indicator-dot {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translate(-50%, -50%);
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.footer-volume-bar_volume-indicator-dot-overlay:hover {
+    opacity: 1;
+}
+
+
+/* footer player */
