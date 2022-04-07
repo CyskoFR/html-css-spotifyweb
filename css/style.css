@@ -5,6 +5,13 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: #6e6e6e;
+    font-weight: 600;
+    cursor: pointer;
+}
+
 header {
     display: flex;
     justify-content: flex-end;
@@ -14,11 +21,9 @@ main {
     display: flex;
 }
 
-a {
-    text-decoration: none;
-    color: #6e6e6e;
-    font-weight: 600;
-    cursor: pointer;
+a:hover {
+    color: white;
+    filter: brightness(2);
 }
 
 .sidebar {
@@ -58,7 +63,7 @@ a {
 
 /* logo */
 .logo-box {
-    padding: 18px;
+    padding: 18px 18px 0;
 }
 
 .logo {
@@ -68,22 +73,44 @@ a {
 
 /* sidebar-nav */
 .sidebar-nav {
-    padding: 4px 18px;
-    overflow: auto;
+    padding: 4px 20px;
+    overflow-y: auto;
+    flex-grow: 1;
 }
 
 .sidebar-main-nav {
     margin-bottom: 18px;
 }
 
-.sidebar-nav li {
-    margin: 14px 0;
+.sidebar-nav_home a{
+    filter: brightness(2);
+    color: white;
 }
 
-.sidebar-main-nav li a img {
+.sidebar-main-nav li {
+    margin: 12px 0;
+    position: relative;
+}
+
+.sidebar-main-nav a, .playlist-nav a {
+    display: flex;
+    align-items: center;
+}
+
+.mark-line {
+    background-color: #adff2f;
+    display: inline-block;
+    width: 4px;
+    height: 30px;
+    position: absolute;
+    left: -20px;
+    top: 0;
+}
+
+.sidebar-main-nav li a svg {
     height: 30px;
     margin-right: 8px;
-    vertical-align: middle;
+    fill: #a3a3a3;
 }
 
 .playlist-title {
@@ -93,24 +120,74 @@ a {
     margin-bottom: 12px;
 }
 
+.playlist-nav li {
+    margin: 20px 0;
+}
+
 .playlist-nav i {
     background-color: #a3a3a3;
     color: #000000;
     padding: 6px 8px;
     font-size: 26px;
-    vertical-align: middle;
     margin-right: 8px;
+}
+
+.sidebar-account {
+    padding: 0 20px;
+}
+
+.sidebar-account_download-row {
+    color: #a3a3a3;
+    padding: 10px 0;
+    font-weight: 600;
+}
+
+.sidebar-account_download-row a {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-account_download-row svg {
+    height: 20px;
+    fill: #a3a3a3;
+    margin-right: 10px;
+}
+
+.sidebar-account_hr {
+    border: none;
+    height: 1px;
+    background-color: #a3a3a3;
+}
+
+.sidebar-account_user {
+    padding: 10px 0;
+}
+
+.sidebar-account_user a {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-account_user svg {
+    height: 30px;
+    background-color: #6e6e6e;
+    border-radius: 50%;
+    margin-right: 14px;
 }
 
 /* /sidebar-nav */
 
-.display-box {
+.album-box {
     background-color: #141922;
     width: calc(100% - 260px);
     height: calc(100vh - 100px);
 }
 
 .footer-player {
+    position: fixed;
+    left: 0;
+    bottom: 0;
     background-color: #282828;
     width: 100%;
     height: 100px;
